@@ -22,33 +22,25 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+<img width="992" height="640" alt="image" src="https://github.com/user-attachments/assets/dc5cf7ef-fd4e-43de-b89b-55bdfba72e51" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="1170" height="687" alt="image" src="https://github.com/user-attachments/assets/0434d20c-78a5-47c1-a506-956fc9ce4b86" />
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="913" height="549" alt="image" src="https://github.com/user-attachments/assets/fd9d9ee8-1ae2-4b22-bf85-12472c0e3bb6" />
+
 
 ### Assumptions
-- 
-- 
-- 
+A member must enroll in at least one program.
 
----
+A program must be led by at least one trainer.
+
+Payments are tied to members and programs (not to trainers directly).
 
 # Scenario B: City Library Event & Book Lending System
 
@@ -64,33 +56,22 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+<img width="803" height="642" alt="image" src="https://github.com/user-attachments/assets/a91e3d66-9f05-43d8-aa1b-5d14a5e1396c" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="924" height="411" alt="image" src="https://github.com/user-attachments/assets/cb75168b-3865-4365-bab2-359dd7aabd3d" />
 
 ### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="1136" height="513" alt="image" src="https://github.com/user-attachments/assets/0ffce8fa-cebf-42c1-b159-be4dd576f1a9" />
 
 ### Assumptions
-- 
-- 
-- 
+A member must exist before borrowing books or registering for events.
 
----
+A book may or may not be borrowed; not all books will always have loans.
+
+Fines are only generated if a book is returned late.
 
 # Scenario C: Restaurant Table Reservation & Ordering
 
@@ -106,33 +87,26 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+<img width="763" height="786" alt="image" src="https://github.com/user-attachments/assets/813904fc-19dd-46c8-9ade-bb8b334505f2" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="909" height="332" alt="image" src="https://github.com/user-attachments/assets/22804286-bebd-424b-bf0d-2d64529a72ec" />
+
+<img width="918" height="125" alt="image" src="https://github.com/user-attachments/assets/d682b192-bd15-480a-859b-ff1d48bad3a5" />
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="1133" height="651" alt="image" src="https://github.com/user-attachments/assets/420bbb97-0faa-4f72-b2fd-7aa8c91ff735" />
+
 
 ### Assumptions
-- 
-- 
-- 
+A customer may exist without making a reservation or placing an order.
 
----
+A reservation must be tied to both a customer and a restaurant.
+
+Every order must belong to a customer and a restaurant.
 
 ## Instructions for Students
 
