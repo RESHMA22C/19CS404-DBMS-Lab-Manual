@@ -104,125 +104,177 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+<img width="1360" height="293" alt="image" src="https://github.com/user-attachments/assets/bd1de13b-fd45-4ece-a0cf-d0285d10d1e3" />
 
-```sql
--- Paste your SQL code below for Question 1
+```
+INSERT INTO student_details (RollNo, Name, Gender, Subject, MARKS)
+VALUES(201, 'David Lee', 'M', 'Physics', 92);
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1240" height="329" alt="image" src="https://github.com/user-attachments/assets/9a2f01ce-90a1-4a8d-870c-91a5ce36c333" />
+
 
 **Question 2**
----
--- Paste Question 2 here
+<img width="1023" height="408" alt="image" src="https://github.com/user-attachments/assets/afca51e1-9944-471b-9d85-26d37723fbbe" />
 
-```sql
--- Paste your SQL code below for Question 2
+
+```
+CREATE TABLE Shipments(
+    ShipmentID INT PRIMARY KEY,
+    ShipmentDate DATE,
+    SupplierID INT,
+    OrderID INT,
+    FOREIGN KEY(SupplierID) REFERENCES Suppliers(SupplierID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
 ```
 
 **Output:**
+<img width="1247" height="317" alt="image" src="https://github.com/user-attachments/assets/19886c28-fa69-4d7a-8126-82f4f9b87fa8" />
 
-![Output2](output.png)
 
 **Question 3**
----
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+<img width="1215" height="447" alt="image" src="https://github.com/user-attachments/assets/f27c8593-fee0-490d-9530-7e0bb4581d73" />
+
+
+```
+CREATE TABLE contacts(
+    contact_id INTEGER PRIMARY KEY,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT,
+    phone TEXT NOT NULL CHECK(length(phone)>=10)
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1228" height="417" alt="image" src="https://github.com/user-attachments/assets/df031407-2148-4668-9e55-946a988b4db9" />
+
 
 **Question 4**
----
--- Paste Question 4 here
+<img width="973" height="511" alt="image" src="https://github.com/user-attachments/assets/d241d8cc-226c-4b04-a053-062692e4ee2d" />
 
-```sql
--- Paste your SQL code below for Question 4
+
+```
+INSERT INTO Student_details(RollNo, Name, Gender, Subject, MARKS)
+SELECT RollNo, Name, Gender, Subject, MARKS
+FROM Archived_students;
 ```
 
 **Output:**
+<img width="1222" height="358" alt="image" src="https://github.com/user-attachments/assets/9354eaea-11e2-4f30-bfc6-c4e0af24a264" />
 
-![Output4](output.png)
 
 **Question 5**
----
--- Paste Question 5 here
+<img width="1246" height="504" alt="image" src="https://github.com/user-attachments/assets/5cbe2df8-5cff-49ec-9d56-8eecced5da36" />
 
-```sql
--- Paste your SQL code below for Question 5
+
+```
+INSERT INTO Student_details(RollNo, Name, Gender, Subject, MARKS)
+VALUES(202, 'Ella King', 'F', 'Chemistry',87);
+INSERT INTO Student_details(RollNo, Name, Gender, Subject, MARKS)
+VALUES(203, 'James Bond', 'M', 'Literature' , 78); 
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1234" height="372" alt="image" src="https://github.com/user-attachments/assets/3eeedc9f-3709-4e3d-853d-aef9b04dfeea" />
+
 
 **Question 6**
----
--- Paste Question 6 here
+<img width="1400" height="488" alt="image" src="https://github.com/user-attachments/assets/f21c1bbc-ada6-4773-9887-89e4a706d3dd" />
 
-```sql
--- Paste your SQL code below for Question 6
+
+```
+CREATE TABLE orders(
+     ord_id TEXT(4) NOT NULL,
+     item_id TEXT NOT NULL,
+     ord_date DATE,
+     ord_qty INTEGER,
+     cost INTEGER,
+     PRIMARY KEY(item_id,ord_date)
+);
+INSERT INTO orders (ord_id, item_id, ord_date, ord_qty, cost) 
+SELECT * FROM orders; 
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1226" height="423" alt="image" src="https://github.com/user-attachments/assets/e4469a95-67a2-4069-b858-1ec9c99b71b2" />
+
 
 **Question 7**
----
--- Paste Question 7 here
+<img width="1388" height="382" alt="image" src="https://github.com/user-attachments/assets/cb62bc07-b3cf-4773-a2d5-1554045e5ae7" />
 
-```sql
--- Paste your SQL code below for Question 7
+
+```
+ALTER TABLE employee
+ADD COLUMN first_name varchar(50);
+ALTER TABLE employee
+ADD COLUMN last_name varchar(50);
 ```
 
 **Output:**
+<img width="1222" height="400" alt="image" src="https://github.com/user-attachments/assets/bb7bf7fd-b228-417b-9601-cd01a2138c33" />
 
-![Output7](output.png)
 
 **Question 8**
----
--- Paste Question 8 here
+<img width="1429" height="374" alt="image" src="https://github.com/user-attachments/assets/1f3c2ebb-6e0f-48fc-b9d1-857575f38c23" />
 
-```sql
--- Paste your SQL code below for Question 8
+
+```
+CREATE TABLE ProjectAssignments(
+    AssignmentID INT PRIMARY KEY,
+    EmployeeID INT,
+    ProjectID INT,
+    AssignmentDate DATE NOT NULL,
+    FOREIGN KEY(EmployeeID) REFERENCES Employees(EmployeeID),
+    FOREIGN KEY(ProjectID) REFERENCES Projects(ProjectID)
+);
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1220" height="375" alt="image" src="https://github.com/user-attachments/assets/7f6adce2-9b89-4f51-a075-63c9eab611d6" />
+
 
 **Question 9**
----
--- Paste Question 9 here
+<img width="1386" height="613" alt="image" src="https://github.com/user-attachments/assets/83f3d448-2abc-4abc-a00c-9b3abf90b3db" />
 
-```sql
--- Paste your SQL code below for Question 9
+
+```
+ALTER TABLE customer
+ADD COLUMN birth_date timestamp;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1210" height="427" alt="image" src="https://github.com/user-attachments/assets/c11930d4-a334-44e0-a3a2-7cadf4bfed46" />
+
 
 **Question 10**
----
--- Paste Question 10 here
+<img width="1243" height="430" alt="image" src="https://github.com/user-attachments/assets/a776240f-9f9a-4627-9b2d-d9d1fa3a6ca0" />
 
-```sql
--- Paste your SQL code below for Question 10
+
+```
+CREATE TABLE Members(
+    MemberID INTEGER,
+    MemberName TEXT,
+    JoinDate DATE
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1227" height="447" alt="image" src="https://github.com/user-attachments/assets/508ea1a3-52e0-4a65-841b-e964d361fe1f" />
+
 
 
 ## RESULT
+Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
